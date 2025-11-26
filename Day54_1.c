@@ -25,16 +25,16 @@ int main() {
     int n;
     scanf("%d", &n);
 
-    int totalSum = n * (n + 1) / 2;  // sum from 1 to n
+    int totalSum = n * (n + 1) / 2;  
     int pivot = -1;
 
     for (int x = 1; x <= n; x++) {
-        int leftSum = x * (x + 1) / 2;               // sum from 1 to x
-        int rightSum = totalSum - (x - 1) * x / 2;   // sum from x to n
+        int leftSum = x * (x + 1) / 2;             
+        int rightSum = totalSum - (x - 1) * x / 2;   
 
         if (leftSum == rightSum) {
             pivot = x;
-            break;  // leftmost pivot found
+            break; 
         }
     }
 
